@@ -171,7 +171,7 @@ Ext.define('Ext.ux.touch.grid.List', {
                 css.push(basePrefix + 'grid-cell-hd');
                 innerText = renderer.call(this, column.header);
             } else {
-                innerText = '{[this.' + rendererName + '(values.' + column.dataIndex + ', values)]}';
+                innerText = '{[this[\'' + rendererName + '\'](values[\'' + column.dataIndex + '\'], values)]}';
 
                 if (column.style) {
                     styles.push(column.style);
